@@ -73,6 +73,8 @@ testmem() {
     printf("FAIL: free mem %d (bytes) instead of %d\n", n, info.freemem);
     exit(1);
   }
+
+  printf("sysinfo: freemem is %d\n", info.freemem);
 }
 
 void
@@ -118,6 +120,7 @@ void testproc() {
       printf("sysinfotest: FAIL nproc is %d instead of %d\n", info.nproc, nproc);
       exit(1);
   }
+  printf("sysinfo: nproc is %d\n", nproc);
 }
 
 void testbad() {
